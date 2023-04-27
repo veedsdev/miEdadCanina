@@ -21,15 +21,16 @@
         android:textColor="@android:color/black" />
     
     <EditText
-        android:id="@+id/ET_age"
+        android:id="@+id/et_age"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
+        android:inputType="number"
         android:hint="Tu edad" />
 
     <TextView
-        android:id="@+id/TV_result_age"
+        android:id="@+id/tv_result_age"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="16dp"
@@ -38,7 +39,7 @@
         tools:text="Tu edad canina es de 60 años"/>
 
     <Button
-        android:id="@+id/BTN_calculate"
+        android:id="@+id/btn_calculate"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"

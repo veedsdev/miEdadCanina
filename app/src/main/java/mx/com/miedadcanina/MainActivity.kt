@@ -30,12 +30,12 @@ class MainActivity : AppCompatActivity() {
             if(ageString.isNotEmpty()){
                 val ageInt = ageString.toInt()
                 val result = ageInt * 7
-                tvResultAge.text="Tu edad canina es de $result años"
+                tvResultAge.text=getString(R.string.your_dog_age_is_r_years,result)
             }
             else{
 
                 Log.d("MainActivity", "ageString is empty")
-                Toast.makeText(this, "Debes insertar tu edad", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, getString(R.string.you_must_insert_your_age), Toast.LENGTH_SHORT).show()
             }
         }
 

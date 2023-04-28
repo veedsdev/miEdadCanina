@@ -7,16 +7,18 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
+import mx.com.miedadcanina.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
 
-        val etAge = findViewById<EditText>(R.id.et_age)
-        val tvResultAge = findViewById<TextView>(R.id.tv_result_age)
-        val btnCalculate = findViewById<Button>(R.id.btn_calculate)
+        val binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+
+        val etAge = binding.etAge
+        val tvResultAge = binding.tvResultAge
 
 //        Log.v("MainActivity", "MainActivity is created verbose")
 //        Log.d("MainActivity", "MainActivity is created debug")
@@ -25,7 +27,7 @@ class MainActivity : AppCompatActivity() {
 //        Log.e("MainActivity", "MainActivity is created error")
 
 
-        btnCalculate.setOnClickListener{
+        binding.btnCalculate.setOnClickListener{
             val ageString = etAge.text.toString()
             if(ageString.isNotEmpty()){
                 val ageInt = ageString.toInt()
